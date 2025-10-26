@@ -31,7 +31,17 @@ export default function Home() {
     checkMobile();
     window.addEventListener('resize', checkMobile);
 
-    return () => window.removeEventListener('resize', checkMobile);
+    // Remove white space/margins
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    document.body.style.overflowX = 'hidden';
+    document.documentElement.style.margin = '0';
+    document.documentElement.style.padding = '0';
+    document.documentElement.style.overflowX = 'hidden';
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
   const scrollToSection = (id) => {
@@ -89,8 +99,12 @@ export default function Home() {
   const styles = {
     container: {
       minHeight: '100vh',
+      width: '100%',
+      margin: 0,
+      padding: 0,
       background: 'linear-gradient(135deg, #020617 0%, #1e3a8a 50%, #020617 100%)',
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+      overflowX: 'hidden'
     },
     heroSection: {
       position: 'relative',
@@ -1072,3 +1086,6 @@ export default function Home() {
     </div>
   );
 }
+
+
+   
