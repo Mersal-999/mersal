@@ -1,19 +1,4 @@
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import {
-  Code2,
-  ChefHat,
-  Dumbbell,
-  Mail,
-  GraduationCap,
-  Sparkles,
-  ArrowRight,
-  Terminal,
-  Laptop,
-  Zap
-} from "lucide-react";
-
 export default function Home() {
   const [showContactForm, setShowContactForm] = useState(false);
   const [formData, setFormData] = useState({
@@ -60,7 +45,7 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const mailtoLink = `mailto:md@gmail.com?subject=${encodeURIComponent(`Bewerbungsanfrage von ${formData.name}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nE-Mail: ${formData.email}\n\nNachricht:\n${formData.message}`)}`;
+    const mailtoLink = `mailto:mohammeed.ali04@gmail.com?subject=${encodeURIComponent(`Bewerbungsanfrage von ${formData.name}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nE-Mail: ${formData.email}\n\nNachricht:\n${formData.message}`)}`;
     window.location.href = mailtoLink;
 
     setFormData({ name: '', email: '', message: '' });
@@ -572,7 +557,7 @@ export default function Home() {
             </div>
 
             <h1 style={styles.mainTitle}>
-              Amed Ali<br />
+              Mohamed Ali<br />
               <span style={styles.gradientText}>
                 Fachinformatiker Anwendungsentwicklung
               </span>
@@ -1041,7 +1026,7 @@ export default function Home() {
                 </div>
                 <div style={{ textAlign: 'left' }}>
                   <p style={{ fontSize: '12px', color: '#67e8f9', marginBottom: '2px' }}>E-Mail</p>
-                  <p style={{ fontWeight: '600', color: 'white', fontSize: isMobile ? '14px' : '16px' }}>md@gmail.com</p>
+                  <p style={{ fontWeight: '600', color: 'white', fontSize: isMobile ? '14px' : '16px' }}>mohammeed.ali04@gmail.com</p>
                 </div>
               </div>
 
@@ -1053,7 +1038,7 @@ export default function Home() {
                 </div>
                 <div style={{ textAlign: 'left' }}>
                   <p style={{ fontSize: '12px', color: '#67e8f9', marginBottom: '2px' }}>Telefon</p>
-                  <p style={{ fontWeight: '600', color: 'white', fontSize: isMobile ? '14px' : '16px' }}>098844334</p>
+                  <p style={{ fontWeight: '600', color: 'white', fontSize: isMobile ? '14px' : '16px' }}>0152465517</p>
                 </div>
               </div>
             </motion.div>
@@ -1066,19 +1051,19 @@ export default function Home() {
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #020617 0%, transparent 100%)' }} />
         <div style={styles.footerContent}>
           <p style={styles.footerText}>
-            © 2025 Amed Ali - FutureDev Portfolio. Erstellt mit ❤️ und Code
+            © 2025 Mohamed Ali - FutureDev Portfolio. Erstellt mit ❤️ und Code
           </p>
           <p style={styles.footerSubtext}>
             Auf der Suche nach einer Ausbildung als Fachinformatiker für Anwendungsentwicklung
           </p>
           <div style={{ marginTop: '16px', display: 'flex', gap: isMobile ? '16px' : '24px', justifyContent: 'center', flexWrap: 'wrap', padding: isMobile ? '0 16px' : '0' }}>
-            <a href="mailto:md@gmail.com" style={{ color: '#67e8f9', textDecoration: 'none', fontSize: isMobile ? '13px' : '14px', transition: 'color 0.3s' }}
+            <a href="mailto:mohammeed.ali04@gmail.com" style={{ color: '#67e8f9', textDecoration: 'none', fontSize: isMobile ? '13px' : '14px', transition: 'color 0.3s' }}
                onMouseEnter={(e) => e.target.style.color = '#22d3ee'}
                onMouseLeave={(e) => e.target.style.color = '#67e8f9'}>
-              📧 md@gmail.com
+              📧 mohammee.ali04@gmail.com
             </a>
             <span style={{ color: '#67e8f9', fontSize: isMobile ? '13px' : '14px' }}>
-              📞 098844334
+              📞 015255465517
             </span>
           </div>
         </div>
@@ -1086,6 +1071,5 @@ export default function Home() {
     </div>
   );
 }
-
 
    
